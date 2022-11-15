@@ -1,0 +1,37 @@
+-------------------------------------------------------------------------------
+Test set: com.example.cloudsql.TestIndexServletPostgres
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.371 s <<< FAILURE! - in com.example.cloudsql.TestIndexServletPostgres
+com.example.cloudsql.TestIndexServletPostgres  Time elapsed: 0.355 s  <<< FAILURE!
+Environment variable 'PG_USER' must be set to perform these tests.
+value of: getenv(...)
+expected nonempty string
+but was : null
+	at com.example.cloudsql.TestIndexServletPostgres.lambda$checkEnvVars$0(TestIndexServletPostgres.java:57)
+	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4390)
+	at com.example.cloudsql.TestIndexServletPostgres.checkEnvVars(TestIndexServletPostgres.java:54)
+	at com.example.cloudsql.TestIndexServletPostgres.createPool(TestIndexServletPostgres.java:80)
+
+com.example.cloudsql.TestIndexServletPostgres  Time elapsed: 0.356 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.example.cloudsql.TestIndexServletPostgres.dropTable(TestIndexServletPostgres.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:364)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:272)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:237)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:158)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+
